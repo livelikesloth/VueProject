@@ -14,7 +14,8 @@
       <router-link to="/databinding/class">Class</router-link> |
       <router-link to="/databinding/style">Style</router-link>
       <hr>
-      <router-link to="/event/clock">Click</router-link> |
+      <router-link to="/event/click">Click</router-link> |
+      <router-link to="/event/change">Change</router-link> |
     </nav>
     <router-view/>
   </div>

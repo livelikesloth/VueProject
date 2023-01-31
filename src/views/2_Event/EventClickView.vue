@@ -1,6 +1,7 @@
 <template>
   <div>
-    dddd
+    <button @click="increaseCounter">Add1</button>
+    <p>{{counter}}</p>
   </div>
 </template>
 <script>
@@ -8,14 +9,18 @@ export default {
   components: {},
   data() {
     return {
-      sampleData: '*'
+      counter: 0
     }
   },
   setup() {},
   created() {},
   mounted() {},
   unmounted() {},
-  methods: {}
+  methods: {
+    increaseCounter() {
+      this.counter += 1
+    }
+  }
 }
 </script>
 <style scoped>

@@ -33,6 +33,22 @@
         {{ dong.dongTitle }}
       </option>
     </select>
+    <select>
+      <!--
+        두번째 select 태그는 change 이벤트를 가지고 전체 동리스트에서 사용자가 선택한 도시에 해당하는 동만 가져왔다
+        아래 세번째는 아예 함수를 거치지 않고 직접 함수 내용을 집어넣어서 구현했다.
+        데이터부분과 화면부분이 구분되어 있기 때문에 가능한 것
+      -->
+      <option
+        :value="dong.dongCode"
+        :key="dong.dongCode"
+        v-for="dong in dongList.filter(
+          (dong) => dong.cityCode === this.selectedCity
+        )"
+      ><!-- 하지만 가독성이 떨어짐-->
+        {{ dong.dongTitle }}
+      </option>
+    </select>
   </div>
 </template>
 <script>
